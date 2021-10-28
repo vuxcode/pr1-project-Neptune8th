@@ -1,1 +1,35 @@
-<!-- Start writing your project code in this file! -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" herf=Calculator.css>
+    </head>
+    <body background="gray" text="white">
+        
+        <input id="SerchBar" type="text" readonly>
+        <button id="button1"><h1>1</h1></button>
+
+
+
+
+
+
+
+
+
+
+        <script>
+            //button
+            var Button_01 = document.getElementById("button1");
+            Button_01.addEventListener("click", goesTo);
+            
+            //Serchbar
+            function goesTo() {
+                var Gobal = document.getElementById("SerchBar");
+                Gobal.value = 1;
+                
+                // console.log = ("1",SB_Input);
+                }
+        </script>
+    </body>
+</html>
