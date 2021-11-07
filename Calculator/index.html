@@ -4,31 +4,40 @@
         <title>Calculator</title>
         <link rel="stylesheet" type="text/css" herf=Calculator.css>
     </head>
-    <body background="gray" text="white">
+    <body background ="#808080" text ="black">
         
         <input id="SerchBar" type="text" readonly>
-        <button id="button1"><h1>1</h1></button>
 
-
-
-
-
-
-
-
-
+        <div class="Calculator-grid"> 
+            <div class="ouput">
+                <div class="previous">test1</div>
+                <div class="current">test2</div>
+           </div> 
+            <button onclick ="number(1)"><h1>1</h1></button>
+            <button onclick ="number(2)"><h1>2</h1></button>
+            <button onclick ="number(3)"><h1>3</h1></button>
+            <button onclick ="number(4)"><h1>4</h1></button>
+            <button onclick ="number(5)"><h1>5</h1></button>
+            <button onclick ="number(6)"><h1>6</h1></button>
+            <button onclick ="number(7)"><h1>7</h1></button>
+            <button onclick ="number(8)"><h1>8</h1></button>
+            <button onclick ="number(9)"><h1>9</h1></button>
+            <button onclick ="number(0)"><h1>0</h1></button>
+            <button onclick ="number('+')"><h1>+</h1></button>
+            <button onclick ="number('-')"><h1>-</h1></button>
+            <button onclick ="number('*')"><h1>×</h1></button>
+            <button onclick ="number('/')"><h1>÷</h1></button>
+        </div>
+        
+        
 
         <script>
-            //button
-            var Button_01 = document.getElementById("button1");
-            Button_01.addEventListener("click", goesTo);
             
             //Serchbar
-            function goesTo() {
-                var Gobal = document.getElementById("SerchBar");
-                Gobal.value = 1;
-                
-                // console.log = ("1",SB_Input);
+            function number(variable) {
+               
+               var local = document.getElementById("SerchBar");
+                local.value = variable;
                 }
         </script>
     </body>
