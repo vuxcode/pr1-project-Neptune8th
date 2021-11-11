@@ -2,9 +2,9 @@
 <html>
     <head>
         <title>Calculator</title>
-        <link rel="stylesheet" type="text/css" herf=Calculator.css>
+        <link rel="stylesheet" type="text/css" href="Calculator.css">
     </head>
-    <body background ="#808080" text ="black">
+    <body>
         
         <input id="SerchBar" type="text" readonly>
 
@@ -14,7 +14,7 @@
                 <div class="current">test2</div>
            </div> 
             <button onclick ="number(1)"><h1>1</h1></button>
-            <button onclick ="number(2)"><h1>2</h1></button>
+            <button onclick ="number2(2)"><h1>2</h1></button>
             <button onclick ="number(3)"><h1>3</h1></button>
             <button onclick ="number(4)"><h1>4</h1></button>
             <button onclick ="number(5)"><h1>5</h1></button>
@@ -23,10 +23,11 @@
             <button onclick ="number(8)"><h1>8</h1></button>
             <button onclick ="number(9)"><h1>9</h1></button>
             <button onclick ="number(0)"><h1>0</h1></button>
-            <button onclick ="number('+')"><h1>+</h1></button>
-            <button onclick ="number('-')"><h1>-</h1></button>
-            <button onclick ="number('*')"><h1>×</h1></button>
-            <button onclick ="number('/')"><h1>÷</h1></button>
+            <button onclick ="operator('+')"><h1>+</h1></button>
+            <button onclick ="operator('-')"><h1>-</h1></button>
+            <button onclick ="operator('*')"><h1>×</h1></button>
+            <button onclick ="operator('/')"><h1>÷</h1></button>
+            <button onclick ="operator('=')"><h1>=</h1></button>
         </div>
         
         
@@ -37,8 +38,24 @@
             function number(variable) {
                
                var local = document.getElementById("SerchBar");
-                local.value = variable;
+                local.value += variable;
+
+                if (variable) {
+                  variable += variable;
+                  alert("=" + variable);
                 }
+
+                }
+
+                if (operator) {
+                    
+                }
+
+               function number2(variable) {
+                   console.log(variable);
+
+               }
+
         </script>
     </body>
 </html>
