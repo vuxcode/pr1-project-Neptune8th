@@ -16,4 +16,8 @@ Dilon's time report
 - List: I add some buttons and number symbols. 
         Organize layout in html language.
         Update with function.
+
+- 2021-11-11 12:50 Worked for 10 min. I have done:
+- List: I add some buttons and number symbols. 
+        Try to fix operator and number.
   
