@@ -18,6 +18,8 @@ Dilon's time report
         Update with function.
 
 - 2021-11-11 12:50 Worked for 10 min. I have done:
-- List: I add some buttons and number symbols. 
-        Try to fix operator and number.
+- List: Try to fix operator and number.
+
+- 2021-11-11 14:20 Worked for 28 min. I have done:
+- List: I put comments in html.
   

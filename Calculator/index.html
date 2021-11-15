@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Wbsite's title (Calculator) -->
         <title>Calculator</title>
+        
+        <!-- "Link" means link to like css.
+              The "rel" attribute specifies the relationship between the current document and the linked document and "stylesheet" stand for Cascading Style Sheets. 
+              The "type" attribute specifies the media type of the linked document/resource. 
+              "href" is href attribute to define the link address -->
         <link rel="stylesheet" type="text/css" href="Calculator.css">
     </head>
     <body>
-        
+        <!-- Input is textbar. Id called serchbar. Type is text. Readonly "is" like can't type in textbar. -->
         <input id="SerchBar" type="text" readonly>
-
+        
+        <!-- All divs are elements. Class is called "Calculator-grid" -->
         <div class="Calculator-grid"> 
+           
+            <!-- Class is called "output" -->
             <div class="ouput">
+
+                <!-- Class is called "previous" and "current" -->
                 <div class="previous">test1</div>
                 <div class="current">test2</div>
            </div> 
+
+            <!-- All buttons called number and operator -->
             <button onclick ="number(1)"><h1>1</h1></button>
             <button onclick ="number2(2)"><h1>2</h1></button>
             <button onclick ="number(3)"><h1>3</h1></button>
@@ -40,19 +53,26 @@
                var local = document.getElementById("SerchBar");
                 local.value += variable;
 
-                if (variable) {
-                  variable += variable;
-                  alert("=" + variable);
-                }
+                console.log(variable);
 
-                }
-
-                if (operator) {
-                    
+                //if (variable) {
+                  //variable += variable;
+                  //alert("=" + variable);
                 }
 
                function number2(variable) {
                    console.log(variable);
+
+               }
+
+               function operator(variable) {
+                   console.log(variable);
+                   
+                   if (hh) {
+                       number += number2;
+                       console.log(hh);
+                    
+                   }
 
                }
 
