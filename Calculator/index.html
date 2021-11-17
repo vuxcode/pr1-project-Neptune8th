@@ -11,8 +11,8 @@
         <link rel="stylesheet" type="text/css" href="Calculator.css">
     </head>
     <body>
-        <!-- Input is textbar. Id called serchbar. Type is text. Readonly "is" like can't type in textbar. -->
-        <input id="SerchBar" type="text" readonly>
+        <!-- Input is textbar. Id called searchbar. Type is text. Readonly "is" like can't type in textbar. -->
+        <input id="SearchBar" type="text" readonly>
         
         <!-- All divs are elements. Class is called "Calculator-grid" -->
         <div class="Calculator-grid"> 
@@ -27,7 +27,7 @@
 
             <!-- All buttons called number and operator -->
             <button onclick ="number(1)"><h1>1</h1></button>
-            <button onclick ="number2(2)"><h1>2</h1></button>
+            <button onclick ="number(2)"><h1>2</h1></button>
             <button onclick ="number(3)"><h1>3</h1></button>
             <button onclick ="number(4)"><h1>4</h1></button>
             <button onclick ="number(5)"><h1>5</h1></button>
@@ -40,42 +40,66 @@
             <button onclick ="operator('-')"><h1>-</h1></button>
             <button onclick ="operator('*')"><h1>×</h1></button>
             <button onclick ="operator('/')"><h1>÷</h1></button>
-            <button onclick ="operator('=')"><h1>=</h1></button>
+            <button onclick ="equal('=')"><h1>=</h1></button>
         </div>
         
         
 
         <script>
+            // Array
+            var steps = ["", "0"];
+
+            var index = 0;
             
-            //Serchbar
+
+            //var operator = "+"; 
+            
+            
+            //Number 1 and 2
             function number(variable) {
-               
-               var local = document.getElementById("SerchBar");
+                var local = document.getElementById("SearchBar");
                 local.value += variable;
 
-                console.log(variable);
-
-                //if (variable) {
-                  //variable += variable;
-                  //alert("=" + variable);
+                if (index < steps.length) {
+                    console.log("Index is" + " " + index);
                 }
 
-               function number2(variable) {
-                   console.log(variable);
+               steps[0] += variable;
 
-               }
+               display();
+               
+            }
 
-               function operator(variable) {
-                   console.log(variable);
-                   
-                   if (hh) {
-                       number += number2;
-                       console.log(hh);
-                    
-                   }
+            //Testing index in console.log
+            function display() {
+                console.log(steps[index])
+            }
 
-               }
 
+            // operrator
+            function operator(variable) {
+                var local = document.getElementById("SearchBar");
+                local.value += variable;
+
+                if (index < steps.length - 1) {
+                    index++;
+                    console.log("Index is" + " " + index);
+                }
+
+                if (index < steps.length) {
+                    console.log("true");
+                }
+                else{
+                    console.log("false");
+                }
+                //steps[0] += variable;
+            }
+            
+            // Testing equal in console.log
+            function equal(variable) {
+                console.log(parseInt(steps[0]) + parseInt(steps[1]));
+
+            }
         </script>
     </body>
 </html>
