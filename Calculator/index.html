@@ -47,13 +47,11 @@
 
         <script>
             // Array
-            var steps = ["", ""];
+            var steps = ["", "",];
 
             var index = 0;
             
-
-            //var operator = "+"; 
-            
+            var symbol = ""; 
             
             //Number 1 and 2
             function number(variable) {
@@ -64,9 +62,7 @@
                     console.log("Index is" + " " + index);
                 }
                 // variable replace index 
-               steps[0] += variable;
-
-               //steps[1] += variable;
+               steps[index] += variable;
 
                display();
                
@@ -95,14 +91,18 @@
                 else{
                     console.log("false");
                 }
+
+                symbol = variable
+                console.log(symbol);
                 //steps[1] += variable;
             }
             
             //Testing equal in console.log
-            function equal(variable) {
+            function equal() {
                 console.log(parseInt(steps[0]) + parseInt(steps[1]));
 
             }
+
         </script>
     </body>
 </html>
