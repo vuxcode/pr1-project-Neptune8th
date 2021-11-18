@@ -30,4 +30,9 @@ Dilon's time report
 - 2021-11-17 21:22 Worked for 2 hour and 26 min. I have done:
 - List: I put more comments in script.
         Add more functions, Array, index, console.log, parseInt, if and else.
+
+
+- 2021-11-18 18:46 Worked for 1 hour and 49 min. I have done:
+- List: I put more comments in script and explain more about how it works.
+        Update with index and fixed some bugs in the program.
   

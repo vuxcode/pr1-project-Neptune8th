@@ -47,59 +47,76 @@
 
         <script>
             // Array
-            var steps = ["", "",];
+            var steps = ["", "", ""];
 
             var index = 0;
             
             var symbol = ""; 
+
             
-            //Number 1 and 2
+
+            
+            // Here is connect to number and index.
             function number(variable) {
+                // It does connect to Textbar by finding id.
                 var local = document.getElementById("TextBar");
                 local.value += variable;
-                // index is 0
-                if (index < steps.length) {
-                    console.log("Index is" + " " + index);
+                
+                // Here begin first number and index is 0
+                if (index > steps.length - 3) {
+                    // Note if index is 2 then it's true for console.log. Console.log help with if someting doesn't work and check index is 2.
+                    console.log("Hello if; Index is increase " + (index - 1) + " to " + " " + index);
                 }
-                // variable replace index 
-               steps[index] += variable;
+                // Here it does if function become false then it goes here and say "Index is not increase" it means you are still 0 index.    
+                else {
+                    // Here console.log is function for easier find bugs if program doesn't work. It said index is still 0 .
+                    console.log("Hello else: Index is not increase so, it means that index is still a" + " " + index);
+                }
 
-               display();
-               
+                // If index is 0 then variable get a number and adding in index's place order which is 0. Also index can be 2. 
+                steps[index] += variable;
+                // Display is a output that connect to "function display() {}".
+                display();
             }
 
-            //Testing index in console.log
+            //Testing index order in console.log exempele ['1', '+', '5'].
             function display() {
-                console.log(steps[index])
+                console.log(steps)
             }
 
 
-            // operrator
+            // Here is connect to Operrator and index.
             function operator(variable) {
+                // It does connect to Textbar by finding id.
                 var local = document.getElementById("TextBar");
                 local.value += variable;
-                // Increase index 0 to 1
-                if (index < steps.length - 1) {
-                    index++;
-                    console.log("Index is" + " " + index);
+                
+                // Here begin first operator and increase index 0 to 1
+                if (index < steps.length - 2) {
+                    index += 2;
+                    // Console.log help with if someting doesn't work and check index 0 to 1.
+                    console.log("Hello if: Index is increase " + (index - 2) + " to " + " " + (index - 1));
                 }
-                // Testing if is true
-                if (index < steps.length) {
-                    console.log("true");
-                }
-                // Testing else is false
-                else{
-                    console.log("false");
+                // If user press two plus symbol then goes to else.
+                else {
+                     // Here get error if you press two plus symbol and it said You can't press two plus symbol increase 2 to 3.
+                    console.log("Hello else: You can't press two plus symbol increase " + index + " to " + (index + 1));
                 }
 
-                symbol = variable
-                console.log(symbol);
-                //steps[1] += variable;
+                // Here is plus symol and put hard code because plus symbol shouldn't put more plus symbol.
+                steps[1] = variable; 
+                
+                //symbol = variable
+                //console.log(symbol);
+
+                // Display is a output that connect to "function display() {}".
+                display();
             }
+
             
-            //Testing equal in console.log
+            // Testing equal in console.log
             function equal() {
-                console.log(parseInt(steps[0]) + parseInt(steps[1]));
+                console.log(parseInt(steps[0]) + parseInt(steps[2]));
 
             }
 
