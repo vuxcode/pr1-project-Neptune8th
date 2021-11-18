@@ -11,8 +11,8 @@
         <link rel="stylesheet" type="text/css" href="Calculator.css">
     </head>
     <body>
-        <!-- Input is textbar. Id called searchbar. Type is text. Readonly "is" like can't type in textbar. -->
-        <input id="SearchBar" type="text" readonly>
+        <!-- Input is textbar. Id called TextBar. Type is text. Readonly "is" like can't type in textbar. -->
+        <input id="TextBar" type="text" readonly>
         
         <!-- All divs are elements. Class is called "Calculator-grid" -->
         <div class="Calculator-grid"> 
@@ -47,7 +47,7 @@
 
         <script>
             // Array
-            var steps = ["", "0"];
+            var steps = ["", ""];
 
             var index = 0;
             
@@ -57,14 +57,16 @@
             
             //Number 1 and 2
             function number(variable) {
-                var local = document.getElementById("SearchBar");
+                var local = document.getElementById("TextBar");
                 local.value += variable;
-
+                // index is 0
                 if (index < steps.length) {
                     console.log("Index is" + " " + index);
                 }
-
+                // variable replace index 
                steps[0] += variable;
+
+               //steps[1] += variable;
 
                display();
                
@@ -78,24 +80,25 @@
 
             // operrator
             function operator(variable) {
-                var local = document.getElementById("SearchBar");
+                var local = document.getElementById("TextBar");
                 local.value += variable;
-
+                // Increase index 0 to 1
                 if (index < steps.length - 1) {
                     index++;
                     console.log("Index is" + " " + index);
                 }
-
+                // Testing if is true
                 if (index < steps.length) {
                     console.log("true");
                 }
+                // Testing else is false
                 else{
                     console.log("false");
                 }
-                //steps[0] += variable;
+                //steps[1] += variable;
             }
             
-            // Testing equal in console.log
+            //Testing equal in console.log
             function equal(variable) {
                 console.log(parseInt(steps[0]) + parseInt(steps[1]));
 
