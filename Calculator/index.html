@@ -51,7 +51,7 @@
 
             var index = 0;
             
-            var symbol = ""; 
+            //var symbol = ""; 
 
             
 
@@ -90,7 +90,7 @@
                 // It does connect to Textbar by finding id.
                 var local = document.getElementById("TextBar");
                 local.value += variable;
-                
+
                 // Here begin first operator and increase index 0 to 1
                 if (index < steps.length - 2) {
                     index += 2;
@@ -103,11 +103,10 @@
                     console.log("Hello else: You can't press two plus symbol increase " + index + " to " + (index + 1));
                 }
 
-                // Here is plus symol and put hard code because plus symbol shouldn't put more plus symbol.
+                // Here is plus symbol and put hard code because plus symbol shouldn't put more plus symbol.
                 steps[1] = variable; 
                 
-                //symbol = variable
-                //console.log(symbol);
+
 
                 // Display is a output that connect to "function display() {}".
                 display();
@@ -116,10 +115,30 @@
             
             // Testing equal in console.log
             function equal() {
+                if (steps[1] == "+") {
+
+                    // Change string to the number.
                 console.log(parseInt(steps[0]) + parseInt(steps[2]));
+                }
+
+                else if (steps[1] == "-") {
+                    console.log(parseInt(steps[0]) - parseInt(steps[2]));
+                }
+
+                else if (steps[1] == "*") {
+                    console.log(parseInt(steps[0]) * parseInt(steps[2]));
+                }
+
+                else if (steps[1] == "/") {
+                    console.log(parseInt(steps[0]) / parseInt(steps[2]));
+                }
+
+                else {
+                    console.log("doesn't work");
+                }
+                
 
             }
-            //hhh
 
         </script>
     </body>
