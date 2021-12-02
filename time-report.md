@@ -43,4 +43,11 @@ Dilon's time report
 
 - 2021-12-02 16:48 Worked for 4 min. I have done:
 - List: I put little bits comments in script.
+
+
+- 2021-12-02 17:20 Worked for 2 hour 23 min. I have done:
+- List: I change whole comments in script. 
+        Add equal in textbar and console.log.
+        Change console.log in string. 
+        I put more if, else and index.
   

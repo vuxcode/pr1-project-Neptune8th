@@ -45,51 +45,69 @@
 
         <script>
             // Array
-            var steps = ["", "", ""];
+            var steps = ["", "", "", ""];
             // Index begin with zero.
             var index = 0;
             // It does connect to Textbar by finding id.
             var global = document.getElementById("TextBar");
             
-            // Here is connect to number and index.
+            // Number puts in index.
             function number(variable) {
-                // Here begin first number and index is 0
+                // If index is 2 "bigger" than 1 then it's true and goes to if.
                 if (index > steps.length - 3) {
-                    // Note if index is 2 then it's true for console.log. Console.log help with if someting doesn't work and check index is 2.
-                    console.log("Hello if; Index is increase " + (index - 1) + " to " + " " + index);
+                    // Console.log help with if someting doesn't work and check index is increase 1 to 2.
+                    console.log("Hello if; Index is increase " + (index - 1) + " to " + index);
                 }
-                // Here it does if function become false then it goes here and say "Index is not increase" it means you are still 0 index.    
+                // If index is 0 "bigger" than 1 then it's false and goes to else.    
                 else {
-                    // Here console.log is function for easier find bugs if program doesn't work. It said index is still 0 .
-                    console.log("Hello else: Index is not increase so, it means that index is still a" + " " + index);
+                    // Console.log is function for easier find bugs if program doesn't work and console.log says "Index is not increase" it means you are still 0 index.
+                    console.log("Hello else: Index is not increase so, it means that index is still " + index);
                 }
-                // If index is 0 then variable get a number and adding in index's place order which is 0. Also index can be 2. 
+                // If index is 0 or 2 then if user press any number then change variable to number. Number puts in index which is 0 or 2.
                 steps[index] += variable;
-                // Display is a output that connect to "function display() {}". Also if number is press then put in index and connect to steps.join in index and will display in TextBar.
+                // Display is an input that connect to "function display() {}" inside function is join function. 
                 display();
             }
 
-            // Here is connect to Operrator and index.
+            // Operrator puts in index.
             function operator(variable) {
-                // Here begin first operator and increase index 0 to 1
-                if (index < steps.length - 2) {
+                // If index is 0 "less" than 1 then it's true and goes to if.
+                if (index < steps.length - 3) {
+                    // Index 0 + 2 = index 2.
                     index += 2;
-                    // Console.log help with if someting doesn't work and check index 0 to 1.
-                    console.log("Hello if: Index is increase " + (index - 2) + " to " + " " + (index - 1));
+                    // Console.log help with if someting doesn't work and check index is increase 0 to 1.
+                    console.log("Hello if: Index is increase " + (index - 2) + " to " + (index - 1));
                 }
-                // If user press two plus symbol then goes to else.
+                
+                // If user press two operators then goes to else.
                 else {
-                     // Here get error if you press two plus symbol and it said You can't press two plus symbol increase 2 to 3.
-                    console.log("Hello else: You can't press two plus symbol increase " + index + " to " + (index + 1));
+                    // If user press two operators and it says you can't press two operators increase 2 to 3.
+                    console.log("Hello else: You can't press two operators increase " + (index - 1) + " to " + index);
                 }
-                // Here is plus symbol and put hard code because plus symbol shouldn't put more plus symbol.
+
+                // If index is 1 then if user press any operators then change variable to operators. Operators put in index which is 1 and put hard code because operators shouldn't put more operators.
                 steps[1] = variable; 
-                // Display is a output that connect to "function display() {}". Also if operator is press then put in index and connect to steps.join in index and will display in TextBar.
+                // Display is an input that connect to "function display() {}" inside function is join function.
                 display();
             }
 
-            // Here is equal when press equal then shows in console.log
-            function equal() {
+            // Equal puts in index.
+            function equal(variable) {
+                
+                // If index is 3 "less" than 4 then it's true and goes to if.
+                if (index < steps.length) {
+                    // Console.log help with if someting doesn't work and check index is increase 2 to 3.
+                    console.log("Hello if; Index is increase " + index + " to " + (index + 1));
+                }
+
+                // If someting wrong with equal
+                else {
+                    console.log("Someting wrong with equal");
+                }
+
+                //If index is 3 then if user press equal then change variable to equal. Equal puts in index which is 3 and put hard code because equal shouldn't put more equal.
+                steps[3] = variable;
+
                 // If program see plus sign then adding both number together and shows answer. Exemple: 5+5=10.
                 if (steps[1] == "+") {
                     // ParseInt change string to the number.
@@ -115,13 +133,15 @@
                     //If program can't find operator then will show in console.log and says "doesn't work".
                     console.log("doesn't work");
                 }
+                // Display is an input that connect to "function display() {}" inside function is join function.
+                display();
             }
 
-            //Here is an input display function.
+            // Here is an output display function.
             function display() {
-                //Testing index order in console.log exempele ['1', '+', '5']. 
+                // Testing index order in console.log exemple: ['1', '+', '5']. 
                 console.log(steps)
-                //Join function is console connect to TextBar and show in searchbar (TextBar).
+                // Join function is console connect to TextBar and show in searchbar (TextBar).
                 global.value = steps.join("");
             }
         </script>
