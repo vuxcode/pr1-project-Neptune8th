@@ -51,17 +51,11 @@
 
             var index = 0;
             
-            //var symbol = ""; 
-
-            
+            var global = document.getElementById("TextBar");
 
             
             // Here is connect to number and index.
             function number(variable) {
-                // It does connect to Textbar by finding id.
-                var local = document.getElementById("TextBar");
-                local.value += variable;
-                
                 // Here begin first number and index is 0
                 if (index > steps.length - 3) {
                     // Note if index is 2 then it's true for console.log. Console.log help with if someting doesn't work and check index is 2.
@@ -79,32 +73,8 @@
                 display();
             }
 
-            //Testing index order in console.log exempele ['1', '+', '5'].
-            function display() {
-                console.log(steps)
-            }
-
-
             // Here is connect to Operrator and index.
             function operator(variable) {
-                // It does connect to Textbar by finding id.
-                var local = document.getElementById("TextBar");
-                
-                var only = steps.slice (0, -2);
-                
-                only += variable;
-
-                
-
-                console.log(only);
-                //local.value += only;
-                //steps = only;
-
-                //local.value += variable;
-
-                //local.value += steps;
-                
-
 
                 // Here begin first operator and increase index 0 to 1
                 if (index < steps.length - 2) {
@@ -121,12 +91,8 @@
                 // Here is plus symbol and put hard code because plus symbol shouldn't put more plus symbol.
                 steps[1] = variable; 
                 
-
-
                 // Display is a output that connect to "function display() {}".
                 display();
-
-                console.log("....." + steps[1]);
             }
 
             
@@ -155,6 +121,13 @@
                 }
                 
 
+            }
+
+            //Testing index order in console.log exempele ['1', '+', '5'].
+            function display() {
+                console.log(steps)
+
+                global.value = steps.join("");
             }
 
         </script>
