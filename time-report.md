@@ -35,4 +35,8 @@ Dilon's time report
 - 2021-11-18 18:46 Worked for 1 hour and 49 min. I have done:
 - List: I put more comments in script and explain more about how it works.
         Update with index and fixed some bugs in the program.
+
+
+- 2021-12-02 16:10 Worked for 30 min. I have done:
+- List: I put more comments in script.
   
