@@ -39,4 +39,8 @@ Dilon's time report
 
 - 2021-12-02 16:10 Worked for 30 min. I have done:
 - List: I put more comments in script.
+
+
+- 2021-12-02 16:48 Worked for 4 min. I have done:
+- List: I put little bits comments in script.
   
