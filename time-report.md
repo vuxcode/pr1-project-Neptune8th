@@ -68,8 +68,8 @@ Dilon's time report
         I add Delete button and function.
 
 
-        - 2021-12-04 20:00 Worked 2 hour 5 min. I have done:
-        - List: Put more comments and change some comments.
-                Change index order and put increase index.
-                Change console.log string.
+- 2021-12-04 20:00 Worked 2 hour 5 min. I have done:
+- List: Put more comments and change some comments.
+        Change index order and put increase index.
+        Change console.log string.
   
