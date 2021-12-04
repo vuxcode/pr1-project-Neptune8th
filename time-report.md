@@ -50,4 +50,9 @@ Dilon's time report
         Add equal in textbar and console.log.
         Change console.log in string. 
         I put more if, else and index.
+
+
+- 2021-12-04 14:42 Worked for 30 min. I have done:
+- List: I add answer function.
+        Add one index and add more comments.
   

@@ -45,7 +45,7 @@
 
         <script>
             // Array
-            var steps = ["", "", "", ""];
+            var steps = ["", "", "", "", ""];
             // Index begin with zero.
             var index = 0;
             // It does connect to Textbar by finding id.
@@ -111,22 +111,30 @@
                 // If program see plus sign then adding both number together and shows answer. Exemple: 5+5=10.
                 if (steps[1] == "+") {
                     // ParseInt change string to the number.
-                console.log(parseInt(steps[0]) + parseInt(steps[2]));
+                    console.log(parseInt(steps[0]) + parseInt(steps[2]));
+                    // When adding both number together and shows answer and put in index which is 4 then it shows answer in index.
+                    steps[4] = parseInt(steps[0]) + parseInt(steps[2]);
                 }
                 // Else if program see minus sign then subtracting both number together and shows answer. Exemple: 10-3=7.
                 else if (steps[1] == "-") {
                     // ParseInt change string to the number.
                     console.log(parseInt(steps[0]) - parseInt(steps[2]));
+                    // When subtracting both number together and shows answer and put in index which is 4 then it shows answer in index.
+                    steps[4] = parseInt(steps[0]) - parseInt(steps[2]);
                 }
                 // Else if program see multiplication sign then multiply both number together and shows answer. Exemple: 3*5=15.
                 else if (steps[1] == "*") {
                     // ParseInt change string to the number.
                     console.log(parseInt(steps[0]) * parseInt(steps[2]));
+                    // When multiply both number together and shows answer and put in index which is 4 then it shows answer in index.
+                    steps[4] = parseInt(steps[0]) * parseInt(steps[2]);
                 }
                 // Else if program see division sign then divide one number and shows answer. Exemple: 20/4=5.
                 else if (steps[1] == "/") {
                     // ParseInt change string to the number.
                     console.log(parseInt(steps[0]) / parseInt(steps[2]));
+                    // When divide one number and shows answer and put in index which is 4 then it shows answer in index.
+                    steps[4] = parseInt(steps[0]) / parseInt(steps[2]);
                 }
                 // If program can't find operator then will be false and put in else function.
                 else {
