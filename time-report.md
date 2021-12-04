@@ -60,4 +60,9 @@ Dilon's time report
 - 2021-12-04 15:20 Worked for 35 min. I have done:
 - List: I add AC button.
         I add function and add one splice function and add more comments.
+
+- 2021-12-04 19:03 Worked for 54 min. I have done:
+- List: Remove some console.log and some new console.log.
+        Put more comments and change some comments.
+        I add Delete button and function.
   

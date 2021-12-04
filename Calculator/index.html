@@ -42,6 +42,7 @@
             <button onclick ="operator('/')"><h1>÷</h1></button>
             <button onclick ="equal('=')"><h1>=</h1></button>
             <button onclick ="AllClear('AC')"><h1>AC</h1></button>
+            <button onclick ="Delete('Del')"><h1>DEL</h1></button>
         </div>
 
         <script>
@@ -55,14 +56,14 @@
             // Number puts in index.
             function number(variable) {
                 // If index is 2 "bigger" than 1 then it's true and goes to if.
-                if (index > steps.length - 3) {
+                if (index > steps.length - 4) {
                     // Console.log help with if someting doesn't work and check index is increase 1 to 2.
-                    console.log("Hello if; Index is increase " + (index - 1) + " to " + index);
+                    console.log("Hello if number: Index is increase " + (index - 1) + " to " + index);
                 }
                 // If index is 0 "bigger" than 1 then it's false and goes to else.    
                 else {
                     // Console.log is function for easier find bugs if program doesn't work and console.log says "Index is not increase" it means you are still 0 index.
-                    console.log("Hello else: Index is not increase so, it means that index is still " + index);
+                    console.log("Hello else number: Index is not increase so, it means that index is still " + index);
                 }
                 // If index is 0 or 2 then if user press any number then change variable to number. Number puts in index which is 0 or 2.
                 steps[index] += variable;
@@ -77,15 +78,13 @@
                     // Index 0 + 2 = index 2.
                     index += 2;
                     // Console.log help with if someting doesn't work and check index is increase 0 to 1.
-                    console.log("Hello if: Index is increase " + (index - 2) + " to " + (index - 1));
+                    console.log("Hello if operator: Index is increase " + (index - 2) + " to " + (index - 1));
                 }
-                
                 // If user press two operators then goes to else.
                 else {
                     // If user press two operators and it says you can't press two operators increase 2 to 3.
-                    console.log("Hello else: You can't press two operators increase " + (index - 1) + " to " + index);
+                    console.log("Hello else operator: You can't press two operators increase " + (index - 1) + " to " + index);
                 }
-
                 // If index is 1 then if user press any operators then change variable to operators. Operators put in index which is 1 and put hard code because operators shouldn't put more operators.
                 steps[1] = variable; 
                 // Display is an input that connect to "function display() {}" inside function is join function.
@@ -93,56 +92,61 @@
             }
 
             // Equal puts in index.
-            function equal(variable) {
-                
+            function equal(variable) {  
                 // If index is 3 "less" than 4 then it's true and goes to if.
                 if (index < steps.length) {
                     // Console.log help with if someting doesn't work and check index is increase 2 to 3.
-                    console.log("Hello if; Index is increase " + index + " to " + (index + 1));
+                    console.log("Hello if equal: Index is increase " + index + " to " + (index + 1));
                 }
-
                 // If someting wrong with equal
                 else {
                     console.log("Someting wrong with equal");
                 }
-
                 //If index is 3 then if user press equal then change variable to equal. Equal puts in index which is 3 and put hard code because equal shouldn't put more equal.
                 steps[3] = variable;
-
+                
                 // If program see plus sign then adding both number together and shows answer. Exemple: 5+5=10.
                 if (steps[1] == "+") {
-                    // ParseInt change string to the number.
-                    console.log(parseInt(steps[0]) + parseInt(steps[2]));
+                    // Testing index order in console.log exemple: ['1', '+', '5', '=', ''].
+                    display();
                     // When adding both number together and shows answer and put in index which is 4 then it shows answer in index.
                     steps[4] = parseInt(steps[0]) + parseInt(steps[2]);
+                    // Console.log help with if someting doesn't work and check index is increase 3 to 4.
+                    console.log("Hello answer: Index is increase " + (index + 1) + " to " + (index + 2)); 
                 }
                 // Else if program see minus sign then subtracting both number together and shows answer. Exemple: 10-3=7.
                 else if (steps[1] == "-") {
-                    // ParseInt change string to the number.
-                    console.log(parseInt(steps[0]) - parseInt(steps[2]));
+                    // Testing index order in console.log exemple: ['20', '-', '5', '=', ''].
+                    display();
                     // When subtracting both number together and shows answer and put in index which is 4 then it shows answer in index.
                     steps[4] = parseInt(steps[0]) - parseInt(steps[2]);
+                    // Console.log help with if someting doesn't work and check index is increase 3 to 4.
+                    console.log("Hello answer: Index is increase " + (index + 1) + " to " + (index + 2));
                 }
                 // Else if program see multiplication sign then multiply both number together and shows answer. Exemple: 3*5=15.
                 else if (steps[1] == "*") {
-                    // ParseInt change string to the number.
-                    console.log(parseInt(steps[0]) * parseInt(steps[2]));
+                    // Testing index order in console.log exemple: ['2', '*', '5', '=', ''].
+                    display();
                     // When multiply both number together and shows answer and put in index which is 4 then it shows answer in index.
                     steps[4] = parseInt(steps[0]) * parseInt(steps[2]);
+                    // Console.log help with if someting doesn't work and check index is increase 3 to 4.
+                    console.log("Hello answer: Index is increase " + (index + 1) + " to " + (index + 2));
                 }
                 // Else if program see division sign then divide one number and shows answer. Exemple: 20/4=5.
                 else if (steps[1] == "/") {
-                    // ParseInt change string to the number.
-                    console.log(parseInt(steps[0]) / parseInt(steps[2]));
+                    // Testing index order in console.log exemple: ['10', '/', '2', '=', ''].
+                    display();
                     // When divide one number and shows answer and put in index which is 4 then it shows answer in index.
                     steps[4] = parseInt(steps[0]) / parseInt(steps[2]);
+                    // Console.log help with if someting doesn't work and check index is increase 3 to 4.
+                    console.log("Hello answer: Index is increase " + (index + 1) + " to " + (index + 2));
                 }
                 // If program can't find operator then will be false and put in else function.
                 else {
                     //If program can't find operator then will show in console.log and says "doesn't work".
                     console.log("doesn't work");
                 }
-                // Display is an input that connect to "function display() {}" inside function is join function.
+                // Display is an input that connect to "function display() {}" inside function is join function and index order in console.log exemple: ['1', '+', '5', '=', '6']. .
                 display();
             }
 
@@ -152,7 +156,19 @@
                 steps.splice(0, 5,"", "", "", "", "");
                 // When splice delete 5 index and put back 5 strings then index must reset 0, so that when user press first number then put in index which is 0.
                 index = 0;
+                // If user press AC then it will show in console.log and says "All is clear and index reset to 0".
+                console.log("All is clear and index reset to 0");
                 // Display is an input that connect to "function display() {}" inside function is join function.
+                display();
+            }
+
+            function Delete() {
+                
+                 
+                steps.splice(-1, 1, ""); 
+                console.log("hello" + index); 
+                
+
                 display();
             }
 
