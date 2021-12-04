@@ -69,7 +69,7 @@
                 }
                 // If index is 0 or 2 then if user press any number then change variable to number. Number puts in index which is 0 or 2.
                 steps[index] += variable;
-                // Display is an input that connect to "function display() {}" inside function is join function. 
+                // Display is an input that connect to "function display() {}". Inside function is join function. 
                 display();
             }
 
@@ -89,7 +89,7 @@
                 }
                 // If index is 1 then if user press any operators then change variable to operators. Operators put in index which is 1 and put hard code because operators shouldn't put more operators.
                 steps[1] = variable; 
-                // Display is an input that connect to "function display() {}" inside function is join function.
+                // Display is an input that connect to "function display() {}". Inside function is join function.
                 display();
             }
 
@@ -99,7 +99,7 @@
                 if (index < steps.length -2) {
                     // Console.log help with if someting doesn't work and check index is increase 2 to 3.
                     console.log("Hello if equal: Index is increase " + index + " to " + (index + 1));
-                    // // Index is increase 2 to 3.
+                    // Index is increase 2 to 3.
                     index++
                 }
                 // If someting wrong with equal
@@ -109,12 +109,16 @@
                 }
                 //If index is 3 then if user press equal then change variable to equal. Equal puts in index which is 3 and put hard code because equal shouldn't put more equal.
                 steps[3] = variable;
-                
+                // Answer is an input that connect to "function answer() {}". Inside function are numbers, operators and answer.
+                answer();
+            }
+
+            // Here is an output answer function.
+            function answer() {
                 // If index is 3 same thing 3 then it's true and goes to if.
                 if (index === steps.length -2) {
                     // Index is increase 3 to 4.
                     index++
-
                     // If program see plus sign then adding both number together and shows answer. Exemple: 5+5=10.
                     if (steps[1] == "+") {
                         // Testing index order in console.log exemple: ['1', '+', '5', '=', ''].
@@ -157,7 +161,7 @@
                         console.log("doesn't work");
                     }  
                 }
-                // Display is an input that connect to "function display() {}" inside function is join function and index order in console.log exemple: ['1', '+', '5', '=', '6']. .
+                // Display is an input that connect to "function display() {}". Inside function is join function and index order in console.log exemple: ['1', '+', '5', '=', '6']. .
                 display();
             }
 
@@ -169,22 +173,56 @@
                 index = 0;
                 // If user press AC then it will show in console.log and says "All is clear and index reset to 0".
                 console.log("All is clear and index reset to 0");
-                // Display is an input that connect to "function display() {}" inside function is join function.
+                // Display is an input that connect to "function display() {}". Inside function is join function.
                 display();
             }
 
+            // If user press Delete button then it will delete each numbers, operators, equal or more.
             function Delete() {
-                
-                 
-                //steps.splice(-1, 1, ""); 
-                //console.log("hello " + index); 
-                
-                //steps.remove("");
-                //steps.pop();
-
-                //delete steps[4]
-
-
+                // If index is 4 same thing 4 then it's true and goes to if. This one will Delete answer.
+                 if (index === steps.length -1) {
+                    // -1 will begin end of index and 1 is before and replace with "".
+                    steps.splice(-1, 1, "");
+                    // Console.log help with if someting doesn't work and check index is decrease 4 to 3.
+                    console.log("Hello if Delete: Index is decrease " + index + " to " + (index -1));
+                    // Index is decrease 4 to 3.
+                    index-- 
+                }
+                // If index is 3 same thing 3 then it's true and goes to else if. This one will Delete equal.
+                else if (index === steps.length -2) {
+                    // -2 will begin end of index and 1 is before and replace with "".
+                    steps.splice(-2, 1, "");
+                    // Console.log help with if someting doesn't work and check index is decrease 3 to 2.
+                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
+                    // Index is decrease 3 to 2.
+                    index--
+                }
+                // If index is 2 same thing 2 then it's true and goes to else if. This one will Delete second number.
+                else if (index === steps.length -3) {
+                    // -3 will begin end of index and 1 is before and replace with "".
+                    steps.splice(-3, 1, "");
+                    // Console.log help with if someting doesn't work and check index is decrease 2 to 1.
+                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
+                    // Index is decrease 2 to 1.
+                    index--
+                }
+                // If index is 1 same thing 1 then it's true and goes to else if. This one will Delete operator.
+                else if (index === steps.length -4) {
+                    // -4 will begin end of index and 1 is before and replace with "".
+                    steps.splice( -4, 1, "");
+                    // Console.log help with if someting doesn't work and check index is decrease 1 to 0.
+                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
+                    // Index is decrease 1 to 0.
+                    index-- 
+                }
+                // If index is 0 same thing 0 then it's true and goes to else if. This one will Delete first number.
+                else if (index === steps.length -5) {
+                    // -5 will begin end of index and 1 is before and replace with "".
+                    steps.splice( -5, 1, "");
+                    // Console.log help with if someting doesn't work and check index is decrease 0 to 0.
+                    console.log("Hello else if Delete: Index is " + index);
+                }
+                // Display is an input that connect to "function display() {}". Inside function is join function.
                 display();
             }
 
