@@ -55,4 +55,9 @@ Dilon's time report
 - 2021-12-04 14:42 Worked for 30 min. I have done:
 - List: I add answer function.
         Add one index and add more comments.
+
+
+- 2021-12-04 15:20 Worked for 35 min. I have done:
+- List: I add AC button.
+        I add function and add one splice function and add more comments.
   

@@ -41,6 +41,7 @@
             <button onclick ="operator('*')"><h1>×</h1></button>
             <button onclick ="operator('/')"><h1>÷</h1></button>
             <button onclick ="equal('=')"><h1>=</h1></button>
+            <button onclick ="AllClear('AC')"><h1>AC</h1></button>
         </div>
 
         <script>
@@ -141,6 +142,16 @@
                     //If program can't find operator then will show in console.log and says "doesn't work".
                     console.log("doesn't work");
                 }
+                // Display is an input that connect to "function display() {}" inside function is join function.
+                display();
+            }
+
+            // If user press AC button then it will delete all numbers, operators, equal and more.
+            function AllClear() {
+                // Array has 5 index and when splice is activate then it will delete 5 index and put back 5 strings.
+                steps.splice(0, 5,"", "", "", "", "");
+                // When splice delete 5 index and put back 5 strings then index must reset 0, so that when user press first number then put in index which is 0.
+                index = 0;
                 // Display is an input that connect to "function display() {}" inside function is join function.
                 display();
             }
