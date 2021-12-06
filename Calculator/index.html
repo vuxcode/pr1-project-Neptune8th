@@ -36,6 +36,7 @@
             <button onclick ="number(8)"><h1>8</h1></button>
             <button onclick ="number(9)"><h1>9</h1></button>
             <button onclick ="number(0)"><h1>0</h1></button>
+            <button onclick ="number('.')"><h1>.</h1></button>
             <button onclick ="operator('+')"><h1>+</h1></button>
             <button onclick ="operator('-')"><h1>-</h1></button>
             <button onclick ="operator('*')"><h1>×</h1></button>
@@ -51,16 +52,16 @@
             // Index begin with zero.
             var index = 0;
             // It does connect to Textbar by finding id.
-            var global = document.getElementById("TextBar");
+            var global = document.getElementById("TextBar"); 
             
             // Number puts in index.
             function number(variable) {
                 // If index is 1 same thing 1 then it's true and goes to if.
                 if (index === steps.length - 4) {
-                    // Console.log help with if someting doesn't work and check index is increase 1 to 2.
-                    console.log("Hello if number: Index is increase " + index + " to " + (index + 1));
                     // Index is increase 1 to 2.
                     index++
+                    // Console.log help with if someting doesn't work and check index is increase 1 to 2.
+                    console.log("Hello if number: Index is increase " + (index - 1) + " to " + index); 
                 }
                 // If index is 0 same thing 1 then it's false and goes to else.    
                 else {
@@ -97,10 +98,10 @@
             function equal(variable) {  
                 // If index is 2 "less" than 3 then it's true and goes to if.
                 if (index < steps.length -2) {
-                    // Console.log help with if someting doesn't work and check index is increase 2 to 3.
-                    console.log("Hello if equal: Index is increase " + index + " to " + (index + 1));
                     // Index is increase 2 to 3.
                     index++
+                    // Console.log help with if someting doesn't work and check index is increase 2 to 3.
+                    console.log("Hello if equal: Index is increase " + (index - 1) + " to " + index);
                 }
                 // If someting wrong with equal
                 else {
@@ -124,7 +125,7 @@
                         // Testing index order in console.log exemple: ['1', '+', '5', '=', ''].
                         display();
                         // When adding both number together and shows answer and put in index which is 4 then it shows answer in index.
-                        steps[4] = parseInt(steps[0]) + parseInt(steps[2]);
+                        steps[4] = parseFloat(steps[0]) + parseFloat(steps[2]);
                         // Console.log help with if someting doesn't work and check index is increase 3 to 4.
                         console.log("Hello answer: Index is increase " + (index - 1) + " to " + index); 
                     }
@@ -133,7 +134,7 @@
                         // Testing index order in console.log exemple: ['20', '-', '5', '=', ''].
                         display();
                         // When subtracting both number together and shows answer and put in index which is 4 then it shows answer in index.
-                        steps[4] = parseInt(steps[0]) - parseInt(steps[2]);
+                        steps[4] = parseFloat(steps[0]) - parseFloat(steps[2]);
                         // Console.log help with if someting doesn't work and check index is increase 3 to 4.
                         console.log("Hello answer: Index is increase " + (index - 1) + " to " + index);
                     }
@@ -142,7 +143,7 @@
                         // Testing index order in console.log exemple: ['2', '*', '5', '=', ''].
                         display();
                         // When multiply both number together and shows answer and put in index which is 4 then it shows answer in index.
-                        steps[4] = parseInt(steps[0]) * parseInt(steps[2]);
+                        steps[4] = parseFloat(steps[0]) * parseFloat(steps[2]);
                         // Console.log help with if someting doesn't work and check index is increase 3 to 4.
                         console.log("Hello answer: Index is increase " + (index - 1) + " to " + index);
                     }
@@ -151,7 +152,7 @@
                         // Testing index order in console.log exemple: ['10', '/', '2', '=', ''].
                         display();
                         // When divide one number and shows answer and put in index which is 4 then it shows answer in index.
-                        steps[4] = parseInt(steps[0]) / parseInt(steps[2]);
+                        steps[4] = parseFloat(steps[0]) / parseFloat(steps[2]);
                         // Console.log help with if someting doesn't work and check index is increase 3 to 4.
                         console.log("Hello answer: Index is increase " + (index - 1) + " to " + index);
                     }
@@ -179,48 +180,21 @@
 
             // If user press Delete button then it will delete each numbers, operators, equal or more.
             function Delete() {
-                // If index is 4 same thing 4 then it's true and goes to if. This one will Delete answer.
-                 if (index === steps.length -1) {
-                    // -1 will begin end of index and 1 is before and replace with "".
-                    steps.splice(-1, 1, "");
-                    // Console.log help with if someting doesn't work and check index is decrease 4 to 3.
+                // If index is 1 "more" than 0 then it's true and goes to if.
+                if (index > 0) {
+                    // variable replace with this "".
+                    steps[index] = "";
+                    // Console.log help with if someting doesn't work and check index is decrease number to number.
                     console.log("Hello if Delete: Index is decrease " + index + " to " + (index -1));
-                    // Index is decrease 4 to 3.
-                    index-- 
+                    // Index is decrease.
+                    index = index -1
                 }
-                // If index is 3 same thing 3 then it's true and goes to else if. This one will Delete equal.
-                else if (index === steps.length -2) {
-                    // -2 will begin end of index and 1 is before and replace with "".
-                    steps.splice(-2, 1, "");
-                    // Console.log help with if someting doesn't work and check index is decrease 3 to 2.
-                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
-                    // Index is decrease 3 to 2.
-                    index--
-                }
-                // If index is 2 same thing 2 then it's true and goes to else if. This one will Delete second number.
-                else if (index === steps.length -3) {
-                    // -3 will begin end of index and 1 is before and replace with "".
-                    steps.splice(-3, 1, "");
-                    // Console.log help with if someting doesn't work and check index is decrease 2 to 1.
-                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
-                    // Index is decrease 2 to 1.
-                    index--
-                }
-                // If index is 1 same thing 1 then it's true and goes to else if. This one will Delete operator.
-                else if (index === steps.length -4) {
-                    // -4 will begin end of index and 1 is before and replace with "".
-                    steps.splice( -4, 1, "");
-                    // Console.log help with if someting doesn't work and check index is decrease 1 to 0.
-                    console.log("Hello else if Delete: Index is decrease " + index + " to " + (index -1));
-                    // Index is decrease 1 to 0.
-                    index-- 
-                }
-                // If index is 0 same thing 0 then it's true and goes to else if. This one will Delete first number.
-                else if (index === steps.length -5) {
-                    // -5 will begin end of index and 1 is before and replace with "".
-                    steps.splice( -5, 1, "");
-                    // Console.log help with if someting doesn't work and check index is decrease 0 to 0.
-                    console.log("Hello else if Delete: Index is " + index);
+                // If index is 0 "more" than 0 then it's false and goes to else.
+                else {
+                    // Console.log help with if someting doesn't work and check index is reset to 0.
+                    console.log("Hello else if Delete: Index is reset to " + index);
+                    // variable replace with this "".
+                    steps[index] = "";
                 }
                 // Display is an input that connect to "function display() {}". Inside function is join function.
                 display();
