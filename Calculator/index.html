@@ -96,20 +96,20 @@
 
             // Equal puts in index.
             function equal(variable) {  
-                // If index is 2 "less" than 3 then it's true and goes to if.
-                if (index < steps.length -2) {
+                // If index is 2 "bigger" than 1 then it's true and goes to if.
+                if (index > steps.length -4) {
                     // Index is increase 2 to 3.
                     index++
                     // Console.log help with if someting doesn't work and check index is increase 2 to 3.
                     console.log("Hello if equal: Index is increase " + (index - 1) + " to " + index);
+                    //If index is 3 then if user press equal then change variable to equal. Equal puts in index which is 3 and put hard code because equal shouldn't put more equal.
+                    steps[3] = variable;
                 }
                 // If someting wrong with equal
                 else {
                     // If user press two equals and it says you can't press two equals increase 3 to 4.
                     console.log("Hello else operator: You can't press two operators increase " + index + " to " + (index + 1));
                 }
-                //If index is 3 then if user press equal then change variable to equal. Equal puts in index which is 3 and put hard code because equal shouldn't put more equal.
-                steps[3] = variable;
                 // Answer is an input that connect to "function answer() {}". Inside function are numbers, operators and answer.
                 answer();
             }
