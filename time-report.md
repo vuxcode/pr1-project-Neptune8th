@@ -76,7 +76,7 @@ Dilon's time report
 
 - 2021-12-04 22:50 Worked 1 hour 52 min. I have done:
   - List: Put more comments and change some comments.
-          Changing Delete function.
+  Changing Delete function.
           Created answer function and moved answer code to answer function.
   
 
