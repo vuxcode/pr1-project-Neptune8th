@@ -10,6 +10,7 @@ REMEMBER TO "COMMIT" YOUR CHANGES TO THIS FILE!
 # Project Summary
 
 * A description of how you want to present the project to the world
+  
   I have created a calculator but not advance calculator. Calculator is mathematic program that can calculate all kinds operators for instance 234.5+65.34=299.84 or 20/4=5
   and more. Calculator is easy to use and you don't have to calculate in your head.
 
