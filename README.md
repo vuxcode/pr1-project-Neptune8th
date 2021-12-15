@@ -15,26 +15,33 @@ REMEMBER TO "COMMIT" YOUR CHANGES TO THIS FILE!
   and more. Calculator is easy to use and you don't have to calculate in your head.
 
 * A reflection of what your experience of creating the project was like.
+  
   In the begining it was hard because I don't know how to create a button and more but after I got helped, I begin to understand to program a code.
   
 * A list of what could be improved on the program if you had more time?
+  
   I want to improve my index because I want my index be more flexible and not hard code. But for now it's very hard or complex to code about calculator.
   
 * A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not?
+  
   I have some budget left because I got some tips from our course and I did before but with only script and yes I stick to the budget.
   
 * What was your initial idea?
+  
   My first idea is to make a calculator and I still makeing calculator till now. 
   
 * How did you create the program?
+  
   I use Visual code and created a html file and css file. Inside html there are head, title, body, input, div, buttons, function, if fuction, else function, console log, id,
   variable, index, array, includes function and more. You can see my code in index.html and Calculator.css
   
 * What did you think of the development process?
+  
   In begining I don't know how to create some buttons but after I got tips from our course and more knowledge and I begun to understnd how to code my program.
   After that it went smooth sailing my code.
   
 * What problems did you have? How did you solve them?
+  
   I had some problems with the calculator but I had solved all problems and you can see my bug list about how I solved each problem.
 
 
