@@ -80,5 +80,5 @@ Dilon's time report
         Created answer function and moved answer code to answer function.
   
 
-  - 2021-12-13 13:30 Worked 5 min. I have done:
+- 2021-12-13 13:30 Worked 5 min. I have done:
    - List: Fixed problem 7.
