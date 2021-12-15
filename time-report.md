@@ -82,3 +82,6 @@ Dilon's time report
 
 - 2021-12-13 13:30 Worked 5 min. I have done:
    - List: Fixed problem 7.
+
+   - 2021-12-15 21:15 Worked 2 hour I have done:
+    - List: Create a dot function and add if and else functions and fixed some codes.
