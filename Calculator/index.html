@@ -11,39 +11,37 @@
         <link rel="stylesheet" type="text/css" href="Calculator.css">
     </head>
     <body>
+        <!-- Class is called "output" -->
+        <div class = "ouput">
+            <!-- Class is called "previous" and "current" -->
+            <div class = "title">Calculator</div>
+        </div>
         <!-- Input is textbar. Id called TextBar. Type is text. Readonly "is" like can't type in textbar. -->
-        <input id="TextBar" type="text" readonly>
+        <input class = "display" id = "TextBar" type = "text" readonly>
         
         <!-- All divs are elements. Class is called "Calculator-grid" -->
         <div class="Calculator-grid"> 
-           
-            <!-- Class is called "output" -->
-            <div class="ouput">
-
-                <!-- Class is called "previous" and "current" -->
-                <div class="previous">test1</div>
-                <div class="current">test2</div>
-           </div> 
-
             <!-- All buttons called number and operator -->
+
+            <button class = "AC" onclick ="AllClear('AC')"><h1>AC</h1></button>
+            <button class = "DEL" onclick ="Delete('Del')"><h1>DEL</h1></button>
             <button onclick ="number(1)"><h1>1</h1></button>
             <button onclick ="number(2)"><h1>2</h1></button>
             <button onclick ="number(3)"><h1>3</h1></button>
+            <button onclick ="operator('/')"><h1>÷</h1></button>
             <button onclick ="number(4)"><h1>4</h1></button>
             <button onclick ="number(5)"><h1>5</h1></button>
             <button onclick ="number(6)"><h1>6</h1></button>
+            <button onclick ="operator('•')"><h1>•</h1></button>
             <button onclick ="number(7)"><h1>7</h1></button>
             <button onclick ="number(8)"><h1>8</h1></button>
             <button onclick ="number(9)"><h1>9</h1></button>
-            <button onclick ="number(0)"><h1>0</h1></button>
-            <button onclick ="dot('.')"><h1>.</h1></button>
-            <button onclick ="operator('+')"><h1>+</h1></button>
             <button onclick ="operator('-')"><h1>-</h1></button>
-            <button onclick ="operator('•')"><h1>•</h1></button>
-            <button onclick ="operator('/')"><h1>÷</h1></button>
+            <button onclick ="dot('.')"><h1>.</h1></button>
+            <button onclick ="number(0)"><h1>0</h1></button>
             <button onclick ="equal('=')"><h1>=</h1></button>
-            <button onclick ="AllClear('AC')"><h1>AC</h1></button>
-            <button onclick ="Delete('Del')"><h1>DEL</h1></button>
+            <button onclick ="operator('+')"><h1>+</h1></button>
+            
         </div>
 
         <script>

@@ -85,3 +85,9 @@ Dilon's time report
 
    - 2021-12-15 21:15 Worked 2 hour I have done:
     - List: Create a dot function and add if and else functions and fixed some codes.
+
+    - 2021-12-16 6:15 Worked 2 hour 16 min I have done:
+     - List: Create these tital, display, Calculator-grid, AC and Del in css. Fixed html order buttons.
+
+    - 2021-12-16 8:40 Worked 1 hour 10 min I have done:
+     - List: Create these grind in buttons and title and move to center. Change color background and buttons.
