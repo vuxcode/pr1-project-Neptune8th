@@ -1,0 +1,35 @@
+/* The body is htmal body. Background change color/colour*/
+body {
+    background: linear-gradient( to right, rgb(241, 54, 54), rgb(61, 224, 216));
+}
+/* Title is grid (display: grid;) and grid goes to center (justify-content: center;). Title increase size and color is black. */
+.title {
+    display: grid;
+    justify-content: center;
+    font-size: 60px; 
+    color: rgb(0, 0, 0);
+}
+/* Display is block (display: block;) and block goes to center (margin: auto;). Display increase size and color is gray. */
+.display{
+    display: block;
+    margin: auto;
+    font-size: 32.2px; 
+    background-color: gray;
+}
+/* Calculator-grid is grid (display: grid;) and grid goes to center (justify-content: center;). Repeat 4 means 4 right and pixel is 100. Repeat 5 means 5 down and pixel is 100.  */
+.Calculator-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+/* AC button increse size. */
+.AC {
+    grid-column: span 2;
+    background-color: rgb(245, 130, 130);
+}
+/* Del button increse size. */
+.DEL {
+    grid-column: span 2;
+    background-color: rgb(245, 130, 130);
+}
